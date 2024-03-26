@@ -11,6 +11,8 @@ def start(update: Update, context: CallbackContext):
 def calculate_card(update: Update, context: CallbackContext):
     birth_date = update.message.text
 
+    birth_date = 28.10.1995
+
     try:
         day, month, year = map(int, birth_date.split('.'))
         total_sum = day // 10 + day % 10 + month // 10 + month % 10 + year // 1000 + (year // 100) % 10 + (
